@@ -1,7 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
+import App from './App';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+const Wrapper = () => {
+    return(
+        <MuiThemeProvider>
+            <App />
+        </MuiThemeProvider>
+    )
+}
+
+ReactDOM.render(
+    
+    <Wrapper />
+
+    , document.getElementById('root'));
 
 
